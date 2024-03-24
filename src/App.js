@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Amazon from './components/Amazon';
 import Cart from './components/Cart';
 import './styles/amazon.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
 	const [show, setShow] = useState(true);
@@ -41,10 +42,27 @@ const App = () => {
 
   return (
 	<React.Fragment>
+
 		<Navbar size={cart.length} setShow={setShow} />
+		<div className= "row">
+				<div className='col-2 my-sidebar'>
+					<ul>
+						<li>Home</li>
+						<li>Home</li>
+						<li>Home</li>
+						<li>Home</li>
+						<li>Home</li>
+					</ul>
+				</div>
+				
+		<div className='col-10'>
 		{
+			
 			show ? <Amazon handleClick={handleClick} /> : <Cart cart={cart} setCart={setCart} handleChange={handleChange} />
+			
 		}
+		</div>
+		</div>
 		{
 			warning && <div className='warning'>Item is already added to your cart</div>
 		}

@@ -1,5 +1,5 @@
 section{
-    width: 80%;
+    width: 100%;
     margin: auto;
     margin-top: 5%;
     display: grid;
@@ -8,11 +8,12 @@ section{
 }
 
 .cards{
-    width: 250px;
+    width: 100%;
     padding: 20px;
 }
 .cards:hover{
     box-shadow: 0 10px 10px 10px rgba(0,0,0,0.1);
+    background-color: #E1AFD1;
     cursor: pointer;
 }
 .image_box img{
